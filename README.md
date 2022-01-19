@@ -1,8 +1,4 @@
-# Computer Graphics – Raster Images
-
-> **To get started:** Clone this repository:
-> 
->     git clone  https://github.com/alecjacobson/computer-graphics-raster-images.git
+# Computer Graphics Assignment 1 – Raster Images
 
 ## Compilation
 
