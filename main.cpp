@@ -20,10 +20,10 @@ int main(int argc, char *argv[])
   if(num_inputs == 0)
   {
     const std::vector<std::string> default_input_file_names = {
-      "../data/dog.png",
-      "../data/glasses.png",
-      "../data/laser-beams.png",
-      "../data/sparkles.png"
+      "data/dog.png",
+      "data/glasses.png",
+      "data/laser-beams.png",
+      "data/sparkles.png"
     };
     input_filenames = default_input_file_names;
     num_inputs = 4;
@@ -86,6 +86,7 @@ int main(int argc, char *argv[])
     read_rgba_from_png(input_filenames[f],next_rgba,next_width,next_height);
     assert(height == next_height && "height must match");
     assert(width == next_width && "width must match");
+    std::cout <<"DOING OVER";
     over(next_rgba,composite_rgba,width,height,composite_rgba);
   }
   std::vector<unsigned char> composite;
