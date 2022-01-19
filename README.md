@@ -4,65 +4,6 @@
 > 
 >     git clone  https://github.com/alecjacobson/computer-graphics-raster-images.git
 
-**Do not fork:** Clicking "Fork" will create a _public_ repository. If you'd like to use GitHub while you work on your assignment, then mirror this repo as a new _private_ repository: https://stackoverflow.com/questions/10065526/github-how-to-make-a-fork-of-public-repository-private
-
-
-## Introduction
-
-Welcome to Computer Graphics! The main purpose of this assignment will be to get
-you up and running with C++ and the cmake build setup used for our assignments.
-
-
-### Prerequisite installation
-
-On all platforms, we will assume you have installed cmake and a modern c++
-compiler on Mac OS X[¹](#¹macusers), Linux[²](#²linuxusers), or
-Windows[³](#³windowsusers).
-
-We also assume that you have cloned this repository using the `--recursive`
-flag (if not then issue `git submodule update --init --recursive`). 
-
-### Layout
-
-All assignments will have a similar directory and file layout:
-
-    README.md
-    CMakeLists.txt
-    main.cpp
-    include/
-      function1.h
-      function2.h
-      ...
-    src/
-      function1.cpp
-      function2.cpp
-      ...
-    data/
-      ...
-    ...
-
-The `README.md` file will describe the background, contents and tasks of the
-assignment.
-
-The `CMakeLists.txt` file setups up the cmake build routine for this
-assignment.
-
-The `main.cpp` file will include the headers in the `include/` directory and
-link to the functions compiled in the `src/` directory. This file contains the
-`main` function that is executed when the program is run from the command line.
-
-The `include/` directory contains one file for each function that you will
-implement as part of the assignment. **_Do not change_** these files.
-
-The `src/` directory contains _empty implementations_ of the functions
-specified in the `include/` directory. This is where you will implement the
-parts of the assignment.
-
-The `data/` directory contains _sample_ input data for your program. Keep in
-mind you should create your own test data to verify your program as you write
-it. It is not necessarily sufficient that your program _only_ works on the given
-sample data.
-
 ## Compilation
 
 This and all following assignments will follow a typical cmake/make build
@@ -87,12 +28,6 @@ Once built, you can execute the assignment from inside the `build/` using
 
     ./raster
 
-## Background
-
-> Every assignment, including this one, will start with a **Background**
-> section. This will cite a chapter of the book to read or review the math and
-> algorithms behind the task in the assignment. Students following the lectures
-> should already be familiar with this material.
 
 ### Read Chapter 3 of _Fundamentals of Computer Graphics (4th Edition)_.
 
@@ -332,53 +267,3 @@ Compute C = A Over B, where A and B are semi-transparent rgba images and
 ![`./raster
 ../data/{dog,glasses,laser-beams,sparkles}.png` should produce this image in
 `composite.ppm`.](images/composite.png) 
-
-### Submission
-
-Submit your completed homework on MarkUs. Open the [MarkUs](https://markus.teach.cs.toronto.edu/2022-01) course 
-page and submit all the `.cpp` files in your `src/` directory under
-Assignment 1: Raster Images in the `raster-images` repository.
-
-### Questions? 
-
-Direct your questions to the [Issues page of this
-repository](https://github.com/alecjacobson/computer-graphics-raster-images/issues).
-
-### Answers?
-
-Help your fellow students by answering questions or positions helpful tips on
-[Issues page of this
-repository](https://github.com/alecjacobson/computer-graphics-raster-images/issues).
-
------------------------------------------------------------------------------
-
-> #### ¹ Mac Users
->
-> You will need to install Xcode if you haven't already. 
->
-> #### ² Linux Users
->
-> Many linux distributions do not include gcc and the basic development tools
-> in their default installation. On Ubuntu, you need to install the following
-> packages (more than needed for this assignment but should cover the whole
-> course):
->
->     sudo apt-get install git
->     sudo apt-get install build-essential
->     sudo apt-get install cmake
->     sudo apt-get install libx11-dev
->     sudo apt-get install mesa-common-dev libgl1-mesa-dev libglu1-mesa-dev
->     sudo apt-get install libxinerama1 libxinerama-dev
->     sudo apt-get install libxcursor-dev
->     sudo apt-get install libxrandr-dev
->     sudo apt-get install libxi-dev
->     sudo apt-get install libxmu-dev
->     sudo apt-get install libblas-dev
->
->
-> #### ³ Windows Users
->
-> Our assignments only support the Microsoft Visual Studio 2015 (and later) compiler in
-> 64bit mode. It will not work with a 32bit build and it will not work with
-> older versions of visual studio.
->
